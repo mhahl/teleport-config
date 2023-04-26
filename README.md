@@ -1,2 +1,3 @@
 # teleport-config
-# teleport-config
+
+Teleport configuration files.

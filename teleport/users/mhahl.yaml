@@ -1,0 +1,17 @@
+kind: user
+metadata:
+  name: mhahl
+spec:
+  roles:
+  - sombernet-admins
+  - sombernet-users
+  traits:
+    aws_role_arns: null
+    db_names: null
+    db_users: null
+    kubernetes_groups: null
+    kubernetes_users: null
+    logins:
+    - mhahl
+    windows_logins: null
+version: v2

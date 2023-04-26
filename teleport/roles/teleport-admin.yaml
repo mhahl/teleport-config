@@ -1,0 +1,280 @@
+kind: role
+metadata:
+  description: Edit cluster configuration
+  name: teleport-admin
+spec:
+  allow:
+    rules:
+    - resources:
+      - user
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - role
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - oidc
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - saml
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - github
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - oidc_request
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - saml_request
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - github_request
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - cluster_audit_config
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - cluster_auth_preference
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - auth_connector
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - cluster_name
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - cluster_networking_config
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - session_recording_config
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - ui_config
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - trusted_cluster
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - remote_cluster
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - token
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - connection_diagnostic
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - db
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - database_certificate
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - installer
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - device
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+      - create_enroll_token
+      - enroll
+    - resources:
+      - db_service
+      verbs:
+      - list
+      - read
+    - resources:
+      - instance
+      verbs:
+      - list
+      - read
+    - resources:
+      - login_rule
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - saml_idp_service_provider
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - user_group
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - okta_import_rule
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - okta_assignment
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - plugin
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+    - resources:
+      - integration
+      verbs:
+      - list
+      - create
+      - read
+      - update
+      - delete
+      - use
+  deny: {}
+  options:
+    cert_format: standard
+    create_host_user: true
+    desktop_clipboard: true
+    desktop_directory_sharing: true
+    enhanced_recording:
+    - command
+    - network
+    forward_agent: true
+    idp:
+      saml:
+        enabled: true
+    max_session_ttl: 30h0m0s
+    pin_source_ip: false
+    port_forwarding: true
+    record_session:
+      desktop: false
+    ssh_file_copy: true
+version: v6
